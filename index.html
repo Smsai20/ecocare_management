@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>EcoCare - Smart Waste Management</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="style.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+
+        <div class="logo-icon">
+            <i class="fa-solid fa-leaf"></i>
+        </div>
+
+        <div>
+            <h2>EcoCare</h2>
+            <span>Smart Waste Management</span>
+        </div>
+
+    </div>
+
+
+    <nav id="navMenu">
+
+        <a href="#home">Home</a>
+
+        <a href="#report">Report Waste</a>
+
+        <a href="#dashboard">Dashboard</a>
+
+        <a href="#recent">Recent Waste</a>
+
+        <a href="#awareness">Awareness</a>
+
+    </nav>
+
+
+    <button class="menu-btn"
+            onclick="toggleMenu()">
+
+        <i class="fa-solid fa-bars"></i>
+
+    </button>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero"
+         id="home">
+
+    <div class="hero-content">
+
+        <span class="hero-tag">
+            <i class="fa-solid fa-earth-americas"></i>
+            CLEAN INDIA • GREEN INDIA
+        </span>
+
+
+        <h1>
+            Let's Make Our
+            <span>Environment Cleaner.</span>
+        </h1>
+
+
+        <p>
+            Report waste, track cleanliness and learn
+            simple ways to reduce waste through our
+            smart waste management platform.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a href="#report"
+               class="btn primary">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Report Waste
+
+            </a>
+
+
+            <a href="#awareness"
+               class="btn secondary">
+
+                Learn Recycling
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="hero-mini">
+
+            <div>
+                <i class="fa-solid fa-shield-heart"></i>
+                Clean Environment
+            </div>
+
+            <div>
+                <i class="fa-solid fa-recycle"></i>
+                Smart Recycling
+            </div>
+
+            <div>
+                <i class="fa-solid fa-seedling"></i>
+                Green Future
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="floating-card card-one">
+
+            <i class="fa-solid fa-recycle"></i>
+
+            <div>
+                <strong>Recycle</strong>
+                <small>Save Resources</small>
+            </div>
+
+        </div>
+
+
+        <div class="earth">
+
+            <div class="earth-circle">
+
+                🌍
+
+            </div>
+
+            <div class="leaf leaf-1">🍃</div>
+            <div class="leaf leaf-2">🌿</div>
+            <div class="leaf leaf-3">🍀</div>
+
+        </div>
+
+
+        <div class="floating-card card-two">
+
+            <i class="fa-solid fa-trash-can"></i>
+
+            <div>
+                <strong>Clean City</strong>
+                <small>Better Tomorrow</small>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="dashboard"
+         id="dashboard">
+
+    <div class="section-heading">
+
+        <span>LIVE DASHBOARD</span>
+
+        <h2>Waste Management Statistics</h2>
+
+        <p>
+            These numbers update automatically when you
+            add, resolve or delete reports.
+        </p>
+
+    </div>
+
+
+    <div class="stats-grid">
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon green">
+                <i class="fa-solid fa-list"></i>
+            </div>
+
+            <div>
+
+                <h3 id="totalReports">
+                    0
+                </h3>
+
+                <p>Total Reports</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon orange">
+                <i class="fa-solid fa-clock"></i>
+            </div>
+
+            <div>
+
+                <h3 id="pendingReports">
+                    0
+                </h3>
+
+                <p>Pending</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon blue">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+
+            <div>
+
+                <h3 id="resolvedReports">
+                    0
+                </h3>
+
+                <p>Resolved</p>
+
+            </div>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="stat-icon purple">
+                <i class="fa-solid fa-leaf"></i>
+            </div>
+
+            <div>
+
+                <h3 id="ecoScore">
+                    0
+                </h3>
+
+                <p>Eco Score</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= REPORT ================= -->
+
+<section class="report-section"
+         id="report">
+
+    <div class="report-box">
+
+
+        <div class="report-info">
+
+            <span>REPORT A PROBLEM</span>
+
+            <h2>
+                Found Waste?
+                <br>
+                <strong>Report It.</strong>
+            </h2>
+
+            <p>
+                Help your community by reporting garbage
+                locations and keeping your surroundings clean.
+            </p>
+
+
+            <div class="report-features">
+
+                <div>
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Report Location</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Add Details</span>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <span>Track Status</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <form id="wasteForm"
+              class="waste-form">
+
+
+            <div class="input-group">
+
+                <label>Your Name</label>
+
+                <input type="text"
+                       id="userName"
+                       placeholder="Enter your name"
+                       required>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Waste Location</label>
+
+                <input type="text"
+                       id="location"
+                       placeholder="Example: Kakinada Beach"
+                       required>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Waste Type</label>
+
+                <select id="wasteType"
+                        required>
+
+                    <option value="">
+                        Select Waste Type
+                    </option>
+
+                    <option>Plastic Waste</option>
+
+                    <option>Food Waste</option>
+
+                    <option>Electronic Waste</option>
+
+                    <option>Paper Waste</option>
+
+                    <option>Glass Waste</option>
+
+                    <option>Mixed Waste</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>Description</label>
+
+                <textarea id="description"
+                          placeholder="Describe the waste problem..."
+                          required></textarea>
+
+            </div>
+
+
+            <button type="submit"
+                    class="submit-btn">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Submit Report
+
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RECENT WASTE ================= -->
+
+<section class="recent"
+         id="recent">
+
+    <div class="section-heading">
+
+        <span>SMART SEARCH</span>
+
+        <h2>Recent Waste Reports</h2>
+
+        <p>
+            Search waste reports dynamically by location,
+            type or description.
+        </p>
+
+    </div>
+
+
+    <div class="search-area">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input type="text"
+                   id="searchInput"
+                   placeholder="Search location, waste type...">
+
+        </div>
+
+
+        <select id="filterType">
+
+            <option value="all">
+                All Waste
+            </option>
+
+            <option value="Plastic Waste">
+                Plastic
+            </option>
+
+            <option value="Food Waste">
+                Food
+            </option>
+
+            <option value="Electronic Waste">
+                E-Waste
+            </option>
+
+            <option value="Paper Waste">
+                Paper
+            </option>
+
+            <option value="Glass Waste">
+                Glass
+            </option>
+
+            <option value="Mixed Waste">
+                Mixed
+            </option>
+
+        </select>
+
+    </div>
+
+
+    <div id="reportsContainer"
+         class="reports-grid">
+
+    </div>
+
+
+    <div id="noReports"
+         class="no-reports">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <h3>No waste reports found</h3>
+
+        <p>
+            Try another search or report a new waste location.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RECENT WASTE DATA ================= -->
+
+<section class="live-data">
+
+    <div class="section-heading">
+
+        <span>RECENT WASTE DATA</span>
+
+        <h2>Waste Management Today</h2>
+
+        <p>
+            A dynamic information panel showing recent
+            waste-management developments.
+        </p>
+
+    </div>
+
+
+    <div class="live-data-grid">
+
+
+        <div class="live-card">
+
+            <div class="live-icon">
+                <i class="fa-solid fa-recycle"></i>
+            </div>
+
+            <span>INDIA</span>
+
+            <h3>Four-Stream Segregation</h3>
+
+            <p>
+                Waste segregation focuses on wet, dry,
+                sanitary and special-care waste.
+            </p>
+
+            <small>
+                Updated 2026
+            </small>
+
+        </div>
+
+
+        <div class="live-card">
+
+            <div class="live-icon">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+
+            <span>E-WASTE</span>
+
+            <h3>Digital Recycling Growth</h3>
+
+            <p>
+                E-waste management is receiving greater
+                attention through formal recycling systems.
+            </p>
+
+            <small>
+                Recent information
+            </small>
+
+        </div>
+
+
+        <div class="live-card">
+
+            <div class="live-icon">
+                <i class="fa-solid fa-chart-simple"></i>
+            </div>
+
+            <span>RECYCLING</span>
+
+            <h3>More Recycling Infrastructure</h3>
+
+            <p>
+                India's recycling infrastructure has expanded
+                significantly in recent years.
+            </p>
+
+            <small>
+                2026 data
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AWARENESS ================= -->
+
+<section class="awareness"
+         id="awareness">
+
+    <div class="section-heading">
+
+        <span>GO GREEN</span>
+
+        <h2>Waste Awareness Hub</h2>
+
+        <p>
+            Click any option to learn, watch and practice
+            simple environmental actions.
+        </p>
+
+    </div>
+
+
+    <div class="awareness-grid">
+
+
+        <!-- REDUCE -->
+
+        <div class="awareness-card"
+             onclick="openAwareness('reduce')">
+
+            <div class="awareness-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80">
+
+                <span>
+                    <i class="fa-solid fa-arrow-down"></i>
+                </span>
+
+            </div>
+
+
+            <div class="awareness-content">
+
+                <h3>Reduce</h3>
+
+                <p>
+                    Create less waste in your daily life.
+                </p>
+
+                <button>
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- REUSE -->
+
+        <div class="awareness-card"
+             onclick="openAwareness('reuse')">
+
+            <div class="awareness-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1604187351574-c75ca79f5807?auto=format&fit=crop&w=800&q=80">
+
+                <span>
+                    <i class="fa-solid fa-repeat"></i>
+                </span>
+
+            </div>
+
+
+            <div class="awareness-content">
+
+                <h3>Reuse</h3>
+
+                <p>
+                    Give old products a second life.
+                </p>
+
+                <button>
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RECYCLE -->
+
+        <div class="awareness-card"
+             onclick="openAwareness('recycle')">
+
+            <div class="awareness-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=800&q=80">
+
+                <span>
+                    <i class="fa-solid fa-recycle"></i>
+                </span>
+
+            </div>
+
+
+            <div class="awareness-content">
+
+                <h3>Recycle</h3>
+
+                <p>
+                    Convert waste into useful resources.
+                </p>
+
+                <button>
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PLANT -->
+
+        <div class="awareness-card"
+             onclick="openAwareness('plant')">
+
+            <div class="awareness-image">
+
+                <img
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=800&q=80">
+
+                <span>
+                    <i class="fa-solid fa-seedling"></i>
+                </span>
+
+            </div>
+
+
+            <div class="awareness-content">
+
+                <h3>Plant More</h3>
+
+                <p>
+                    Create greener communities.
+                </p>
+
+                <button>
+                    Explore
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= AWARENESS MODAL ================= -->
+
+<div id="awarenessModal"
+     class="awareness-modal">
+
+    <div class="modal-box">
+
+
+        <button class="close-btn"
+                onclick="closeAwareness()">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+
+        <div id="awarenessDetails">
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= TOAST ================= -->
+
+<div id="toast"
+     class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toastText">
+        Success
+    </span>
+
+</div>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-logo">
+
+        <i class="fa-solid fa-leaf"></i>
+
+        <strong>EcoCare</strong>
+
+    </div>
+
+
+    <p>
+        Small actions today create a cleaner tomorrow.
+    </p>
+
+
+    <div class="socials">
+
+        <i class="fa-brands fa-instagram"></i>
+
+        <i class="fa-brands fa-facebook"></i>
+
+        <i class="fa-brands fa-youtube"></i>
+
+    </div>
+
+
+    <p class="copyright">
+
+        © 2026 EcoCare Waste Management System
+
+    </p>
+
+</footer>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
